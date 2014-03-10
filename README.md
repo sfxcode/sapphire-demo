@@ -3,7 +3,21 @@ sapphire-demo
 
 sapphire demo applications
 
+## Demos
+
+### Notes
+
+If you start the demos from sbt with run,
+
+the resource com/sun/javafx/scene/control/skin/modena/modena.css can not be found.
+
+Workaround:
+
+Start from within the IDE or use java form command line.
+
+[Post in scalafx user group](https://groups.google.com/forum/#!topic/scalafx-users/MzHb19SISHQ)
 ### Base
+
 
 An example for simple controller exchange.
 
