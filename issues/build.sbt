@@ -2,7 +2,7 @@ name := "sapphire-demo-issues"
 
 organization := "com.sfxcode"
 
-version := "0.8.0"
+version := "0.8.1"
 
 scalaVersion := "2.10.3"
 
@@ -21,4 +21,4 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "2.3.7" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "0.8.0"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "0.8.1"
