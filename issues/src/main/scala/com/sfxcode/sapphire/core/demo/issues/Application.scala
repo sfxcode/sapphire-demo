@@ -38,5 +38,4 @@ class IssuesApplicationController extends AppController {
 
   }
 
-
 }

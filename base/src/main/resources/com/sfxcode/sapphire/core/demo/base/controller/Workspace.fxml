@@ -15,7 +15,7 @@
             <center>
                 <ListView fx:id="listView" layoutX="138.0" layoutY="116.0" prefHeight="176.0" prefWidth="200.0">
                     <cellFactory>
-                        <ListCellFactory property="Exp{_self.name()} [Exp{_self.id()}]"/>
+                        <ListCellFactory property="!{_self.name()} [!{_self.id()}]"/>
                     </cellFactory>
                 </ListView>
             </center>
