@@ -39,10 +39,12 @@ class ProfileController extends ViewController {
 @sfxml
 class ProfileFxml(var viewController: ProfileController) {
 
+  // delegate event to view controller
   def actionLogout(event: ActionEvent) {
     viewController.actionLogout(event)
   }
 
+  // execute view controller function
   def actionUpdate(event: ActionEvent) {
     viewController.debugUserData()
   }

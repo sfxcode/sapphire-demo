@@ -1,7 +1,9 @@
 sapphire-demo
 =============
 
-sapphire demo applications
+sapphire demo applications.
+
+based on sapphire-core 0.8.6.
 
 ## Demos
 

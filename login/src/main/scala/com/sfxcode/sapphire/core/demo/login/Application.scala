@@ -21,9 +21,6 @@ object Application extends FXApp {
     width = 500
     height = 500
     scene = new Scene {
-      scene = new Scene {
-        fill = LIGHTBLUE
-      }
     }
   }
 
