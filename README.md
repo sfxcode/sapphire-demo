@@ -16,6 +16,7 @@ Workaround:
 Start from within the IDE or use java form command line.
 
 [Post in scalafx user group](https://groups.google.com/forum/#!topic/scalafx-users/MzHb19SISHQ)
+
 ### Base
 
 

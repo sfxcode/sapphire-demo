@@ -1,4 +1,4 @@
-package com.sfxcode.sapphire.core.demo.login.mdel
+package com.sfxcode.sapphire.core.demo.login.model
 
 import java.util.Date
 

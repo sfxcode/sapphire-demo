@@ -1,14 +1,17 @@
 package com.sfxcode.sapphire.core.demo.base.controller
 
 import com.sfxcode.sapphire.core.controller.ViewController
-import javafx.scene.layout.Pane
-import javafx.fxml.FXML
+import scalafx.scene.layout.Pane
 import com.sfxcode.sapphire.core.scene.{ContentDidChangeEvent, ContentManager}
 import javax.enterprise.event.Observes
-import com.sfxcode.sapphire.core.event.ActionEvents
+import scalafxml.core.macros.sfxml
+import javax.inject.Named
+import javax.enterprise.context.ApplicationScoped
 
-
-class MainWindowController extends ViewController with ActionEvents {
+@Named
+@ApplicationScoped
+class MainWindowController extends ViewController  {
+  def ui = fxml.asInstanceOf[MainWindowFxml]
 
   lazy val workspaceController = getController[WorkspaceController]()
   lazy val workspace2Controller = getController[Workspace2Controller]()
@@ -17,23 +20,13 @@ class MainWindowController extends ViewController with ActionEvents {
   lazy val navigation2Controller = getController[Navigation2Controller]()
 
 
-  lazy val workspaceManager = ContentManager(workspacePane, this, null)
-  lazy val navigationManager = ContentManager(navigationPane, this, null)
+  var workspaceManager:ContentManager = _
+  var navigationManager:ContentManager = _
 
-  @FXML
-  var workspacePane: Pane = _
-
-  @FXML
-  var statusPane: Pane = _
-
-  @FXML
-  var navigationPane: Pane = _
-
-  override def didGainVisibility() {
-    super.didGainVisibility()
-    navigationManager.updatePaneContent(navigation2Controller)
+  override def didGainVisibilityFirstTime() {
+    navigationManager = ContentManager(ui.navigationPane, this, navigation2Controller)
     navigationManager.updatePaneContent(defaultNavigationController)
-    showWorkspace1()
+    workspaceManager = ContentManager(ui.workspacePane, this, workspaceController)
   }
 
   def showWorkspace1() {
@@ -57,3 +50,6 @@ class MainWindowController extends ViewController with ActionEvents {
   }
 
 }
+
+@sfxml
+class MainWindowFxml(val workspacePane: Pane, val statusPane: Pane, val navigationPane: Pane)

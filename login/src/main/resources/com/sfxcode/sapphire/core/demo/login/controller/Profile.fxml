@@ -38,7 +38,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="Profile" focusTraversable="false" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.sfxcode.sapphire.core.demo.login.controller.ProfileController">
+<AnchorPane id="Profile" focusTraversable="false" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.sfxcode.sapphire.core.demo.login.controller.ProfileFxml">
   <children>
     <AnchorPane id="anchorPane1" prefHeight="371.0" prefWidth="500.0" styleClass="top-segment" AnchorPane.bottomAnchor="129.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>

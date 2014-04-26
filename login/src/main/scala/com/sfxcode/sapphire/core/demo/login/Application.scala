@@ -9,7 +9,7 @@ import scalafx.application.JFXApp.PrimaryStage
 import scalafx.scene.Scene
 import com.sfxcode.sapphire.core.demo.login.controller.{ProfileController, LoginController}
 import scalafx.scene.paint.Color._
-import com.sfxcode.sapphire.core.demo.login.mdel.User
+import com.sfxcode.sapphire.core.demo.login.model.User
 import com.sfxcode.sapphire.core.value.FXBean
 
 object Application extends FXApp {

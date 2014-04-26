@@ -10,7 +10,7 @@ class StatusBarController extends ViewController{
   val testContent = new Group {
 
      children = List(
-       new Button {
+        new Button {
          text = "State"
          id = "state"
        })

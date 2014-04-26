@@ -1,17 +1,15 @@
 package com.sfxcode.sapphire.core.demo.base.controller
 
+import scalafx.scene.control.ListView
 import com.sfxcode.sapphire.core.controller.ViewController
-import javafx.fxml.FXML
-import javafx.scene.control.ListView
 import com.sfxcode.sapphire.core.demo.base.model.{PersonFactory, Person}
 import com.sfxcode.sapphire.core.value.FXBeanCollections._
-import com.sfxcode.sapphire.core.value.{FXBeanCollections, FXBean}
+import com.sfxcode.sapphire.core.value.FXBean
 import com.sfxcode.sapphire.core.Includes._
+import scalafxml.core.macros.sfxml
 
 class WorkspaceController extends ViewController  {
-
-  @FXML
-  var listView: ListView[FXBean[Person]] = _
+  def ui = fxml.asInstanceOf[WorkspaceFxml]
 
   val personList = observableBuffer[Person]
 
@@ -20,7 +18,7 @@ class WorkspaceController extends ViewController  {
   override def didGainVisibilityFirstTime() {
     super.willGainVisibility()
     PersonFactory.personList.foreach(p => personList.+=(p))
-    listView.setItems(personList)
+    ui.listView.setItems(personList)
   }
 
   override def didGainVisibility() {
@@ -28,3 +26,6 @@ class WorkspaceController extends ViewController  {
   }
 
 }
+
+@sfxml
+class WorkspaceFxml(val listView: ListView[FXBean[Person]] )
