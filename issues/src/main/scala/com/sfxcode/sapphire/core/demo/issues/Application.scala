@@ -9,6 +9,7 @@ import scalafx.application.JFXApp.PrimaryStage
 import scalafx.scene.Scene
 import scalafx.scene.paint.Color._
 import com.sfxcode.sapphire.core.demo.issues.controller.IssueTrackingLiteController
+import com.sfxcode.sapphire.fxml.ScalaFxmlLoading
 
 object Application extends FXApp {
 
@@ -29,8 +30,8 @@ object Application extends FXApp {
 
 @Named
 @ApplicationScoped
-class IssuesApplicationController extends AppController {
-  lazy val mainController = getController[IssueTrackingLiteController]()
+class IssuesApplicationController extends AppController with ScalaFxmlLoading {
+  lazy val mainController = getScalaController[IssueTrackingLiteController]()
 
   def applicationDidLaunch() {
     println("start " + this)

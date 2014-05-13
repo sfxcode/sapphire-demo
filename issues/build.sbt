@@ -2,7 +2,7 @@ name := "sapphire-demo-issues"
 
 organization := "com.sfxcode"
 
-version := "0.8.6"
+version := "0.8.7"
 
 scalaVersion := "2.11.0"
 
@@ -21,8 +21,8 @@ resolvers ++= Seq(
 )
 
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "0.8.6"
+libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-core" % "0.8.8"
 
 libraryDependencies += "org.scalafx" % "scalafxml-core_2.10" % "0.1" intransitive()
 
-libraryDependencies += "com.sfxcode.scalafxml" %% "scalafxml-core-macros" % "0.2.0" intransitive()
+libraryDependencies += "com.sfxcode.scalafxml" %% "scalafxml-core-macros" % "0.3.0" intransitive()

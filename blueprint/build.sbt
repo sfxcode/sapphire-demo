@@ -2,7 +2,7 @@ name := "blueprint"
 
 organization := "com.sfxcode"
 
-version := "0.8.6"
+version := "0.8.8"
 
 scalaVersion := "2.11.0"
 
@@ -20,8 +20,5 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "2.3.7" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "0.8.6"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "0.8.8"
 
-libraryDependencies += "org.scalafx" % "scalafxml-core_2.10" % "0.1" intransitive()
-
-libraryDependencies += "com.sfxcode.scalafxml" %% "scalafxml-core-macros" % "0.2.0" intransitive()
