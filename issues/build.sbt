@@ -2,7 +2,7 @@ name := "sapphire-demo-issues"
 
 organization := "com.sfxcode"
 
-version := "0.8.7"
+version := "0.8.8"
 
 scalaVersion := "2.11.0"
 
