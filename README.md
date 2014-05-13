@@ -3,7 +3,7 @@ sapphire-demo
 
 sapphire demo applications.
 
-based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 0.8.6.
+based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 0.8.8.
 
 ## Demos
 
