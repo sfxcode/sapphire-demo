@@ -2,9 +2,9 @@ name := "sapphire-demo-login"
 
 organization := "com.sfxcode"
 
-version := "0.8.8"
+version := "0.9.1"
 
-scalaVersion := "2.11.0"
+scalaVersion := "2.11.1"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
@@ -21,5 +21,5 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "2.3.11" % "test"
 )
 
-libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-core" % "0.8.8"
+libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-core" % "0.9.1"
 

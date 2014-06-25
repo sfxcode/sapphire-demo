@@ -34,6 +34,8 @@ class LoginController extends ViewController {
       applicationController().applicationUser = user
       applicationController().showMain()
     }
+    else
+      errorMessage.setText("Login Error")
   }
 
   def applicationController():LoginApplicationController =   {
