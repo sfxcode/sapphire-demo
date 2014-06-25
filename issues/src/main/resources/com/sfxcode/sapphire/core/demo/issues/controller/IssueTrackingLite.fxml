@@ -31,15 +31,11 @@
   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
-<?import com.sfxcode.sapphire.core.scene.control.cell.*?>
-<?import com.sfxcode.sapphire.core.scene.control.cell.FXValueFactory?>
-<?import java.lang.*?>
+<?import com.sfxcode.sapphire.control.table.*?>
 <?import java.net.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?scenebuilder-classpath-element ../../../../../../../../../../target/scala-2.10/test-classes?>
-<?scenebuilder-classpath-element ../../../../../../../../../../target/scala-2.10/classes?>
 
 <AnchorPane id="AnchorPane" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="theme" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.sfxcode.sapphire.core.demo.issues.controller.IssueTrackingLiteFxml">
   <children>
