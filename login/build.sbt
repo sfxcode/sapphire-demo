@@ -18,7 +18,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2" % "2.3.11" % "test"
+  "org.specs2" %% "specs2" % "2.3.12" % "test"
 )
 
 libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-core" % "0.9.1"

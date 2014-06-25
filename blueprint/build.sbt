@@ -2,7 +2,7 @@ name := "blueprint"
 
 organization := "com.sfxcode"
 
-version := "0.8.8"
+version := "0.9.1"
 
 scalaVersion := "2.11.0"
 
@@ -17,8 +17,8 @@ resolvers ++= Seq(
 
 
 libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2" % "2.3.7" % "test"
+  "org.specs2" %% "specs2" % "2.3.12" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "0.8.8"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.1"
 
