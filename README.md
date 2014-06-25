@@ -3,7 +3,7 @@ sapphire-demo
 
 sapphire demo applications.
 
-based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 0.8.8.
+based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 0.9.1.
 
 ## Demos
 
@@ -32,6 +32,12 @@ JavaFX Login Demo pimped by Sapphire.
 
 JavaFX Issues Demo pimped by Sapphire.
 
+FXML support by scalafxml.
+
+[https://github.com/vigoo/scalafxml/] (https://github.com/vigoo/scalafxml)
+
+
 ### Blueprint
 
-Blueprint Application for initial usage
+Blueprint Application for initial usage.
+
