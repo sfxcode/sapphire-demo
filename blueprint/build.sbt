@@ -4,7 +4,7 @@ organization := "com.sfxcode"
 
 version := "0.9.1"
 
-scalaVersion := "2.11.0"
+scalaVersion := "2.11.2"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
@@ -20,5 +20,5 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "2.3.12" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.1"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.4"
 
