@@ -9,7 +9,6 @@ import scalafx.application.JFXApp.PrimaryStage
 import scalafx.scene.Scene
 import scalafx.scene.paint.Color._
 import com.sfxcode.sapphire.core.demo.issues.controller.IssueTrackingLiteController
-import com.sfxcode.sapphire.fxml.ScalaFxmlLoading
 
 object Application extends FXApp {
 
