@@ -31,6 +31,7 @@ class LoginController extends ViewController {
     val user = UserDatabase.find(email.getText, password.getText)
     val authenticated = user.isDefined
     if (authenticated) {
+      password.clear()
       applicationController().applicationUser = user
       applicationController().showMain()
     }
