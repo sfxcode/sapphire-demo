@@ -3,7 +3,7 @@ sapphire-demo
 
 sapphire demo applications.
 
-based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 0.9.4.
+based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 0.9.5.
 
 ## Demos
 
@@ -13,11 +13,9 @@ If you start the demos from sbt with run,
 
 the resource com/sun/javafx/scene/control/skin/modena/modena.css can not be found.
 
-Workaround:
+Workaround sbt setting:
 
-Start from within the IDE or use java form command line.
-
-[See Post in scalafx user group](https://groups.google.com/forum/#!topic/scalafx-users/MzHb19SISHQ)
+unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/ext/jfxrt.jar"))
 
 
 ### Form
@@ -36,6 +34,7 @@ FXML support by scalafxml.
 
 [https://github.com/vigoo/scalafxml/] (https://github.com/vigoo/scalafxml)
 
+compile from IntelliJ IDEA, because of sbt console compile problems
 
 ### Blueprint
 

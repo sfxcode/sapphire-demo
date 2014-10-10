@@ -1,14 +1,18 @@
 package com.sfxcode.sapphire.core.demo.issues
 
-import javax.inject.Named
 import javax.enterprise.context.ApplicationScoped
-import com.sfxcode.sapphire.core.controller.AppController
-import scalafx.stage.Stage
+import javax.enterprise.inject.Produces
+import javax.inject.Named
+
+import com.sfxcode.sapphire.control.fxml.ScalaFxmlLoading
 import com.sfxcode.sapphire.core.cdi.FXApp
+import com.sfxcode.sapphire.core.controller.AppController
+import com.sfxcode.sapphire.core.demo.issues.controller.IssueTrackingLiteController
+
 import scalafx.application.JFXApp.PrimaryStage
 import scalafx.scene.Scene
 import scalafx.scene.paint.Color._
-import com.sfxcode.sapphire.core.demo.issues.controller.IssueTrackingLiteController
+import scalafx.stage.Stage
 
 object Application extends FXApp {
 
@@ -27,15 +31,21 @@ object Application extends FXApp {
 
 }
 
+case class EmptyName(name:String)
+
 @Named
 @ApplicationScoped
-class IssuesApplicationController extends AppController with ScalaFxmlLoading {
+class ApplicationController extends AppController with ScalaFxmlLoading {
   lazy val mainController = getScalaController[IssueTrackingLiteController]()
 
   def applicationDidLaunch() {
     println("start " + this)
     replaceSceneContent(mainController)
+  }
 
+  @Produces
+  def emptyName:EmptyName = {
+    EmptyName("New Issue")
   }
 
 }

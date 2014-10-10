@@ -2,7 +2,7 @@ name := "sapphire-demo-form"
 
 organization := "com.sfxcode"
 
-version := "0.9.4"
+version := "0.9.5"
 
 scalaVersion := "2.11.2"
 
@@ -22,4 +22,6 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "2.3.12" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.4"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "0.9.5"
+
+unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/ext/jfxrt.jar"))
