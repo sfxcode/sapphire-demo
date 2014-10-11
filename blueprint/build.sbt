@@ -2,7 +2,7 @@ name := "blueprint"
 
 organization := "com.sfxcode"
 
-version := "0.9.5"
+version := "0.9.6"
 
 scalaVersion := "2.11.2"
 
@@ -20,7 +20,7 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "2.3.12" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.5"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.6"
 
 unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/ext/jfxrt.jar"))
 

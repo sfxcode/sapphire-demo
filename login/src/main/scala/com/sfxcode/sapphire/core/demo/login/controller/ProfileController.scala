@@ -20,6 +20,7 @@ class ProfileController extends ViewController {
   }
 
   def actionLogout(event: ActionEvent) {
+    userAdapter.revert()
     userAdapter.set()
     applicationController().applicationUser = None
     applicationController() showLogin()
