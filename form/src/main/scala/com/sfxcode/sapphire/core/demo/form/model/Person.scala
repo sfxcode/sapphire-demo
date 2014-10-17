@@ -38,9 +38,9 @@ object PersonDatabase  {
     override def dateFormatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss")
   }
 
-  val personen = read[List[Person]](fromJson("/data.json"))
+  val persons = read[List[Person]](fromJson("/data.json"))
 
-  val friends = personen(0).friends
+  val friends = persons(2).friends
 
 
   def fromJson(name: String): String = {
@@ -48,11 +48,13 @@ object PersonDatabase  {
     Source.fromInputStream(is, "UTF-8").getLines().mkString
   }
 
-  def testPerson(id:Int) = FXBean(personen(id))
+  def testPerson(id:Int) = FXBean(persons(id))
 
   def testFriend(id:Int) = FXBean(friends(id))
 
-  def testPersonen = personen.map(item => FXBean[Person](item))
+  def personList = persons.map(item => FXBean[Person](item))
 
-  def testFriends = friends.map(item => FXBean[Friend](item))
+  def smallPersonList = personList.take(10)
+
+  def friendList = friends.map(item => FXBean[Friend](item))
 }

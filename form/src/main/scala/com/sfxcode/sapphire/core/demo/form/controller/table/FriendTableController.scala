@@ -16,7 +16,7 @@ class FriendTableController extends AbstractTableViewController {
 
    def ct =  classTag[R]
 
-   def records: ObservableList[FXBean[R]] =  ObservableBuffer(PersonDatabase.testFriends)
+   def records: ObservableList[FXBean[R]] =  ObservableBuffer(PersonDatabase.friendList)
 
    def initTable(tableController: FXTableViewController[R]): Unit = {
 

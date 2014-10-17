@@ -2,7 +2,7 @@ name := "sapphire-demo-form"
 
 organization := "com.sfxcode"
 
-version := "0.9.6"
+version := "0.9.7-SNAPSHOT"
 
 scalaVersion := "2.11.2"
 

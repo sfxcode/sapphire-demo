@@ -16,7 +16,7 @@ class PersonTableController extends AbstractTableViewController {
 
   def ct =  classTag[R]
 
-  def records: ObservableList[FXBean[R]] =  ObservableBuffer(PersonDatabase.testPersonen)
+  def records: ObservableList[FXBean[R]] =  ObservableBuffer(PersonDatabase.personList)
 
   def initTable(tableController: FXTableViewController[R]): Unit = {
     tableController.hideColumn("tags")
