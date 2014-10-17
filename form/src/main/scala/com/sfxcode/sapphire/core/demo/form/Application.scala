@@ -1,16 +1,15 @@
 package com.sfxcode.sapphire.core.demo.form
 
-import javax.enterprise.util.AnnotationLiteral
-import com.sfxcode.sapphire.core.cdi.FXApp
-import javax.inject.Named
 import javax.enterprise.context.ApplicationScoped
+import javax.inject.Named
+
+import com.sfxcode.sapphire.core.cdi.FXApp
 import com.sfxcode.sapphire.core.controller.AppController
-import javax.enterprise.event.Observes
-import com.sfxcode.sapphire.core.cdi.annotation.FXStage
-import scalafx.stage.Stage
+import com.sfxcode.sapphire.core.demo.form.controller.MainWindowController
+
 import scalafx.application.JFXApp.PrimaryStage
 import scalafx.scene.Scene
-import com.sfxcode.sapphire.core.demo.form.controller.FormController
+import scalafx.stage.Stage
 
 
 object Application extends FXApp {
@@ -25,13 +24,13 @@ object Application extends FXApp {
 
 @Named
 @ApplicationScoped
-class FormApplicationController extends AppController {
+class DemoApplicationController extends AppController {
 
-  lazy val formController = getController[FormController]()
+  lazy val controller = getController[MainWindowController]()
 
   def applicationDidLaunch() {
     println("start " + this)
-    replaceSceneContent(formController)
+    replaceSceneContent(controller)
   }
 
 }
