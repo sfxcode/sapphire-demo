@@ -19,10 +19,11 @@ class PersonTableController extends AbstractTableViewController {
   def records: ObservableList[FXBean[R]] =  ObservableBuffer(PersonDatabase.personList)
 
   def initTable(tableController: FXTableViewController[R]): Unit = {
-    tableController.hideColumn("tags")
-    tableController.hideColumn("friends")
-    tableController.hideColumn("about")
-    tableController.addSearchBox("genderFilter", "gender", "all")
+    tableController.hideColumn("tags", "friends","about","guid","picture")
+
+    tableController.addSearchField("addressFilter", "address").setPromptText("Address")
+    tableController.addSearchBox("genderFilter", "gender", "male/female")
+    tableController.addSearchBox("fruitFilter", "favoriteFruit", "all fruits")
   }
 
 }

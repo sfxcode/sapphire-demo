@@ -30,7 +30,14 @@ class ListFormController extends AbstractBaseController {
     val cellFactory = new FXListCellFactory[FXBean[Friend]]
     cellFactory.setProperty("Name: ${_self.name()} ID: ${_self.id()}")
     listView.setCellFactory(cellFactory)
+    comboBox.getSelectionModel.selectFirst()
 
+  }
+
+
+  override def willGainVisibility(): Unit = {
+    super.willGainVisibility()
+    comboBox.getSelectionModel.selectFirst()
   }
 
   def comboBoxDidChange(newValue: String)  {

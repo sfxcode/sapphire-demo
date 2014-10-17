@@ -33,9 +33,9 @@ abstract class AbstractTableViewController extends AbstractBaseController with L
     super.didGainVisibilityFirstTime()
     tableController = FXTableViewController[R](table, records, searchBox)(ct)
     // add default search Field
-    tableController.addSearchField("nameFilter", "name").setPromptText("Name")
     tableController.addColumns()
     tableController.hideColumn("metaData")
+    tableController.addSearchField("nameFilter", "name").setPromptText("Name")
     initTable(tableController)
     tableController.selectedItem.onChange((_, oldValue, newValue) => selectedTableViewItemDidChange(oldValue, newValue))
 
@@ -48,7 +48,7 @@ abstract class AbstractTableViewController extends AbstractBaseController with L
   def initTable(tableController:FXTableViewController[R])
 
   def selectedTableViewItemDidChange(oldValue:FXBean[R], newValue:FXBean[R]): Unit = {
-    logger.debug("new value: %s".format(newValue.bean))
+    logger.info("new value: %s".format(newValue.bean))
   }
 
 
