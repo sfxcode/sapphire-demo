@@ -42,13 +42,13 @@ abstract class AbstractTableViewController extends AbstractBaseController with L
   }
 
   override def didGainVisibility() {
-    mainWindowController.statusBar.setText("%d Daten wurden geladen".format(tableController.values.size))
+    mainWindowController.statusBar.setText("%d records loaded".format(tableController.values.size))
   }
 
   def initTable(tableController:FXTableViewController[R])
 
   def selectedTableViewItemDidChange(oldValue:FXBean[R], newValue:FXBean[R]): Unit = {
-    logger.info("new value: %s".format(newValue.bean))
+    logger.info("new value: %s".format(newValue))
   }
 
 

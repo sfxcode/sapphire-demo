@@ -19,21 +19,23 @@ class FormController extends AbstractBaseController {
 
   lazy val formAdapter = FXBeanAdapter[Person](this, formPane.asInstanceOf[Node])
   lazy val adapter = FXBeanAdapter[Person](this)
+
   val random = new Random()
 
   override def didGainVisibilityFirstTime() {
     super.didGainVisibilityFirstTime()
+
+    val bindings = KeyBindings()
+    bindings.add("person", "Person ${_self.name()} with age of ${_self.age()} is active: ${_self.isActive()}")
+    adapter.addBindings(bindings)
+
     val bindingList = List("name", "age", "address", "isActive")
-    val bindings = KeyBindings(bindingList, "form1_")
-    bindings.add(bindingList, "form2_")
-    formAdapter.addBindings(bindings)
+    val formBindings = KeyBindings(bindingList, "form1_")
+    formBindings.add(bindingList, "form2_")
+    formAdapter.addBindings(formBindings)
     formAdapter.addConverter("form1_age", "IntegerStringConverter")
     formAdapter.addConverter("form2_age", "IntegerStringConverter")
     formAdapter.addConverter("form2_isActive", "BooleanStringConverter")
-
-    val bindings2 = KeyBindings()
-    bindings2.add("person", "Person ${_self.name()} with age of ${_self.age()} is active: ${_self.isActive()}")
-    adapter.addBindings(bindings2)
 
   }
 
