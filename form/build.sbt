@@ -2,7 +2,7 @@ name := "sapphire-demo-form"
 
 organization := "com.sfxcode"
 
-version := "0.9.7-SNAPSHOT"
+version := "0.9.8"
 
 scalaVersion := "2.11.4"
 
@@ -19,13 +19,13 @@ resolvers ++= Seq(
 
 
 libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2" % "2.3.12" % "test"
+  "org.specs2" %% "specs2" % "2.4.14" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.6.6"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.8"
 
-libraryDependencies += "org.json4s" %% "json4s-native" % "3.2.10"
+libraryDependencies += "org.json4s" %% "json4s-native" % "3.2.11"
 
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.0.13"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
 
 unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/ext/jfxrt.jar"))
