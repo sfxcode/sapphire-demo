@@ -2,9 +2,9 @@ name := "sapphire-demo-login"
 
 organization := "com.sfxcode"
 
-version := "0.9.6"
+version := "0.9.8"
 
-scalaVersion := "2.11.2"
+scalaVersion := "2.11.4"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
@@ -18,12 +18,12 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2" % "2.3.12" % "test"
+  "org.specs2" %% "specs2" % "2.4.14" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "0.9.6"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "0.9.8"
 
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.0.13"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
 
 unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/ext/jfxrt.jar"))
 
