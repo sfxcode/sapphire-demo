@@ -27,5 +27,3 @@ libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.8"
 libraryDependencies += "org.json4s" %% "json4s-native" % "3.2.11"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
-
-unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/ext/jfxrt.jar"))
