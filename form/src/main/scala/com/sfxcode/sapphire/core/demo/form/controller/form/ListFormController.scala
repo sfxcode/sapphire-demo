@@ -8,12 +8,13 @@ import com.sfxcode.sapphire.core.demo.form.controller.AbstractBaseController
 import com.sfxcode.sapphire.core.demo.form.model.{Friend, PersonDatabase}
 import com.sfxcode.sapphire.core.value.FXBean
 import com.sfxcode.sapphire.core.Includes._
+import com.typesafe.scalalogging.LazyLogging
 
 import scalafx.Includes._
 import scalafx.collections.ObservableBuffer
 
 
-class ListFormController extends AbstractBaseController {
+class ListFormController extends AbstractBaseController with LazyLogging {
 
   @FXML
   var comboBox: ComboBox[String] = _
@@ -41,7 +42,7 @@ class ListFormController extends AbstractBaseController {
   }
 
   def comboBoxDidChange(newValue: String)  {
-    println(personsMap(newValue).bean.friends)
+    logger.debug(personsMap(newValue).bean.friends.toString())
     listView.setItems(personsMap(newValue).bean.friends)
   }
 

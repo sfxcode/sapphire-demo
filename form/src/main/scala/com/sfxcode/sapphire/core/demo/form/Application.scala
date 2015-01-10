@@ -6,6 +6,7 @@ import javax.inject.Named
 import com.sfxcode.sapphire.core.cdi.FXApp
 import com.sfxcode.sapphire.core.controller.AppController
 import com.sfxcode.sapphire.core.demo.form.controller.MainWindowController
+import com.typesafe.scalalogging.LazyLogging
 
 import scalafx.application.JFXApp.PrimaryStage
 import scalafx.scene.Scene
@@ -24,12 +25,12 @@ object Application extends FXApp {
 
 @Named
 @ApplicationScoped
-class DemoApplicationController extends AppController {
+class DemoApplicationController extends AppController with LazyLogging {
 
   lazy val controller = getController[MainWindowController]()
 
   def applicationDidLaunch() {
-    println("start " + this)
+    logger.debug("start " + this)
     replaceSceneContent(controller)
   }
 

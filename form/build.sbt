@@ -2,7 +2,7 @@ name := "sapphire-demo-form"
 
 organization := "com.sfxcode"
 
-version := "0.9.8"
+version := "0.9.9"
 
 scalaVersion := "2.11.4"
 
@@ -22,7 +22,7 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "2.4.14" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.8"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.9"
 
 libraryDependencies += "org.json4s" %% "json4s-native" % "3.2.11"
 
