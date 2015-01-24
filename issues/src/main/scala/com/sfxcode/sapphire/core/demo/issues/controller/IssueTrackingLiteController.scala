@@ -44,7 +44,7 @@ class IssueTrackingLiteController extends ViewController {
     Some(selected.value)
   }
 
-  def actionCreateIssue(event: ActionEvent) {
+  def actionCreateIssue() {
     selectedProjectName.foreach(projectName => {
       val newIssue = IssueDataBase.createIssue(projectName, emptyName.name)
       updateProject(projectName, projectName)
@@ -109,8 +109,8 @@ class IssueTrackingLiteFxml(val list: ListView[String], val table: TableView[FXB
   list.getSelectionModel.selectedItemProperty.onChange((_, oldValue, newValue) => viewController.updateProject(oldValue, newValue))
   table.getSelectionModel.selectedItemProperty.onChange((_, _, newValue) => viewController.selectIssue(newValue))
 
-  def actionCreateIssue(event: ActionEvent) {
-    viewController.actionCreateIssue(event)
+  def actionCreateIssue() {
+    viewController.actionCreateIssue()
   }
 
   def actionDeleteIssue(event: ActionEvent) {

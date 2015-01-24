@@ -1,13 +1,12 @@
 package com.sfxcode.sapphire.core.demo.login.controller
 
-import com.sfxcode.sapphire.core.controller.ViewController
 import javafx.fxml.FXML
 import javafx.scene.control._
-import javafx.event.ActionEvent
-import com.sfxcode.sapphire.core.demo.login.model.UserDatabase
-import com.sfxcode.sapphire.core.demo.login.LoginApplicationController
 
 import com.sfxcode.sapphire.core.Includes._
+import com.sfxcode.sapphire.core.controller.ViewController
+import com.sfxcode.sapphire.core.demo.login.LoginApplicationController
+import com.sfxcode.sapphire.core.demo.login.model.UserDatabase
 
 
 class LoginController extends ViewController {
@@ -27,7 +26,7 @@ class LoginController extends ViewController {
     email.setText("admin@logindemo.com")
   }
 
-  def actionLogin(event: ActionEvent) {
+  def actionLogin() {
     val user = UserDatabase.find(email.getText, password.getText)
     val authenticated = user.isDefined
     if (authenticated) {
