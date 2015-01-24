@@ -4,15 +4,13 @@ import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.layout.AnchorPane
 
-import com.sfxcode.sapphire.control.properties.BeanItem
+import com.sfxcode.sapphire.control.properties.BeanItems
 import com.sfxcode.sapphire.core.demo.form.controller.AbstractBaseController
 import com.sfxcode.sapphire.core.demo.form.model.{Person, PersonDatabase}
-import com.sfxcode.sapphire.core.value.{KeyBindings, FXBeanAdapter, FXBean}
+import com.sfxcode.sapphire.core.value.{FXBean, FXBeanAdapter, KeyBindings}
 import org.controlsfx.control.PropertySheet
-import org.controlsfx.control.PropertySheet.Item
 
 import scala.util.Random
-import scalafx.collections.ObservableBuffer
 
 
 class PropertiesFormController extends AbstractBaseController {
@@ -25,13 +23,21 @@ class PropertiesFormController extends AbstractBaseController {
 
   lazy val adapter = FXBeanAdapter[Person](this)
 
+  val beanItems = BeanItems()
 
   override def didGainVisibilityFirstTime() {
     super.didGainVisibilityFirstTime()
+
+    beanItems.addItem( "name", "Name", "Basic", "Name")
+    beanItems.addItem( "age", "Age", "Basic", "Age")
+    beanItems.addItem( "isActive", "Active", "Extended", "Active")
+    beanItems.addItem( "registered", "Registered", "Extended", "Registered")
+
+
     propPane.getChildren.add(propertySheet)
 
     val bindings = KeyBindings()
-    bindings.add("person", "Person ${_self.name()} with age of ${_self.age()} is active: ${_self.isActive()}")
+    bindings.add("person", "Person ${_self.name()} with age of ${_self.age()} is active: ${_self.isActive()} ${sf:dateString(_self.registered())}")
     adapter.addBindings(bindings)
 
     setRandomPerson()
@@ -51,13 +57,8 @@ class PropertiesFormController extends AbstractBaseController {
     val person: FXBean[Person] = PersonDatabase.testPerson(random.nextInt(100))
     adapter.set(Some(person))
 
-    val items = new ObservableBuffer[Item]()
-    items.add(BeanItem(person, "name", "Basic", "Name"))
-    items.add(BeanItem(person, "age", "Basic", "Age"))
-    items.add(BeanItem(person, "isActive", "Extended", "Active"))
-    items.add(BeanItem(person, "registered", "Extended", "Registered"))
-
-    propertySheet.getItems.setAll(items)
+    beanItems.updateBean( person)
+    propertySheet.getItems.setAll(beanItems.getItems)
 
   }
 
