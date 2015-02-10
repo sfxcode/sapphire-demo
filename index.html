@@ -3,11 +3,11 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
+    <meta name="viewport" content="width=640">
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
 
     <script type="text/javascript" src="javascripts/modernizr.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -47,40 +47,42 @@
 
       <section id="main_content">
         <h1>
-<a name="sapphire-demo" class="anchor" href="#sapphire-demo"><span class="octicon octicon-link"></span></a>sapphire-demo</h1>
+<a id="sapphire-demo" class="anchor" href="#sapphire-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>sapphire-demo</h1>
 
 <p>sapphire demo applications.</p>
 
-<p>based on <a href="http://sfxcode.github.io/sapphire-core/">sapphire-core</a> 0.9.1.</p>
+<p>based on <a href="http://sfxcode.github.io/sapphire-core/">sapphire-core</a> 0.9.9.6.</p>
+
+<p>and <a href="http://sfxcode.github.io/sapphire-extension/">sapphire-extension</a> 0.3.0.</p>
 
 <h2>
-<a name="demos" class="anchor" href="#demos"><span class="octicon octicon-link"></span></a>Demos</h2>
+<a id="demos" class="anchor" href="#demos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demos</h2>
 
 <h3>
-<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h3>
+<a id="notes" class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h3>
 
 <p>If you start the demos from sbt with run,</p>
 
 <p>the resource com/sun/javafx/scene/control/skin/modena/modena.css can not be found.</p>
 
-<p>Workaround:</p>
+<p>Workaround sbt setting:</p>
 
-<p>Start from within the IDE or use java form command line.</p>
+<p>unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/ext/jfxrt.jar"))</p>
 
-<p><a href="https://groups.google.com/forum/#!topic/scalafx-users/MzHb19SISHQ">See Post in scalafx user group</a></p>
+<p>All demos are tested with IntelliJ Idea.</p>
 
 <h3>
-<a name="form" class="anchor" href="#form"><span class="octicon octicon-link"></span></a>Form</h3>
+<a id="form" class="anchor" href="#form" aria-hidden="true"><span class="octicon octicon-link"></span></a>Form</h3>
 
 <p>A simple Form Demo. It shows the usage of FXAdapter / Bindings.</p>
 
 <h3>
-<a name="login-demo" class="anchor" href="#login-demo"><span class="octicon octicon-link"></span></a>Login Demo</h3>
+<a id="login-demo" class="anchor" href="#login-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Login Demo</h3>
 
 <p>JavaFX Login Demo pimped by Sapphire.</p>
 
 <h3>
-<a name="issues-demo" class="anchor" href="#issues-demo"><span class="octicon octicon-link"></span></a>Issues Demo</h3>
+<a id="issues-demo" class="anchor" href="#issues-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Issues Demo</h3>
 
 <p>JavaFX Issues Demo pimped by Sapphire.</p>
 
@@ -88,8 +90,10 @@
 
 <p><a href="https://github.com/vigoo/scalafxml">https://github.com/vigoo/scalafxml/</a></p>
 
+<p>compile from IntelliJ IDEA, because of sbt console compile problems</p>
+
 <h3>
-<a name="blueprint" class="anchor" href="#blueprint"><span class="octicon octicon-link"></span></a>Blueprint</h3>
+<a id="blueprint" class="anchor" href="#blueprint" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blueprint</h3>
 
 <p>Blueprint Application for initial usage.</p>
       </section>
