@@ -3,7 +3,9 @@ sapphire-demo
 
 sapphire demo applications.
 
-based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 0.9.6.
+based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 0.9.9.6.
+
+and [sapphire-extension](http://sfxcode.github.io/sapphire-extension/) 0.3.0.
 
 ## Demos
 
@@ -17,6 +19,8 @@ Workaround sbt setting:
 
 unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/ext/jfxrt.jar"))
 
+
+All demos are tested with IntelliJ Idea.
 
 ### Form
 
