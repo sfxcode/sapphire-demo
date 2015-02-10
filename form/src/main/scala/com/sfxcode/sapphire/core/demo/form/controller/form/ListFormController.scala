@@ -3,7 +3,7 @@ package com.sfxcode.sapphire.core.demo.form.controller.form
 import javafx.fxml.FXML
 import javafx.scene.control.{ComboBox, ListView}
 
-import com.sfxcode.sapphire.control.FXListCellFactory
+import com.sfxcode.sapphire.extension.FXListCellFactory
 import com.sfxcode.sapphire.core.demo.form.controller.AbstractBaseController
 import com.sfxcode.sapphire.core.demo.form.model.{Friend, PersonDatabase}
 import com.sfxcode.sapphire.core.value.FXBean

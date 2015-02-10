@@ -20,10 +20,10 @@ resolvers ++= Seq(
 
 
 libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2" % "2.4.14" % "test"
+  "org.specs2" %% "specs2" % "2.4.16" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.9.6"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.3.0"
 
 libraryDependencies += "org.json4s" %% "json4s-native" % "3.2.11"
 

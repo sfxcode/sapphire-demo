@@ -2,9 +2,9 @@ name := "blueprint"
 
 organization := "com.sfxcode"
 
-version := "0.9.8"
+version := "0.9.9.6"
 
-scalaVersion := "2.11.4"
+scalaVersion := "2.11.5"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
@@ -17,10 +17,10 @@ resolvers ++= Seq(
 
 
 libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2" % "2.4.14" % "test"
+  "org.specs2" %% "specs2" % "2.4.16" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-control" % "0.9.8"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.3.0"
 
 
 

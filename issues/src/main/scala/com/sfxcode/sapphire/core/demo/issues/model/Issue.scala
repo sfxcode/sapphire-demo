@@ -50,8 +50,8 @@ object IssueDataBase {
   }
 
   def deleteIssue(issueId: String) {
-    assert(issuesMap.containsKey(issueId))
-    issuesMap.-=(issueId)
+    if (issuesMap.containsKey(issueId))
+      issuesMap.-=(issueId)
   }
 
   createIssue("Project1", "We rode in sorrow, with strong hounds three",

@@ -4,7 +4,7 @@ import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.layout.AnchorPane
 
-import com.sfxcode.sapphire.control.properties.BeanItems
+import com.sfxcode.sapphire.extension.properties.BeanItems
 import com.sfxcode.sapphire.core.demo.form.controller.AbstractBaseController
 import com.sfxcode.sapphire.core.demo.form.model.{Person, PersonDatabase}
 import com.sfxcode.sapphire.core.value.{FXBean, FXBeanAdapter, KeyBindings}

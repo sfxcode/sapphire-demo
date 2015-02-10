@@ -4,7 +4,7 @@ import javax.enterprise.context.ApplicationScoped
 import javax.enterprise.inject.Produces
 import javax.inject.Named
 
-import com.sfxcode.sapphire.control.fxml.ScalaFxmlLoading
+import com.sfxcode.sapphire.extension.fxml.ScalaFxmlLoading
 import com.sfxcode.sapphire.core.cdi.FXApp
 import com.sfxcode.sapphire.core.controller.AppController
 import com.sfxcode.sapphire.core.demo.issues.controller.IssueTrackingLiteController
