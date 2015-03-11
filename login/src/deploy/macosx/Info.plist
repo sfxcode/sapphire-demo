@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+ <dict>
+  <key>LSMinimumSystemVersion</key>
+  <string>10.7.4</string>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>English</string>
+  <key>CFBundleAllowMixedLocalizations</key>
+  <true/>
+  <key>CFBundleExecutable</key>
+  <string>sapphire-demo-login</string>
+  <key>CFBundleIconFile</key>
+  <string>sapphire-demo-login.icns</string>
+  <key>CFBundleIdentifier</key>
+  <string>sapphire-demo-login</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>sapphire-demo-login</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.1.4</string>
+  <key>CFBundleSignature</key>
+  <string>????</string>
+  <!-- See http://developer.apple.com/library/mac/#releasenotes/General/SubmittingToMacAppStore/_index.html
+       for list of AppStore categories -->
+  <key>LSApplicationCategoryType</key>
+  <string></string>
+  <key>CFBundleVersion</key>
+  <string>1.0</string>
+  <key>NSHumanReadableCopyright</key>
+  <string></string>
+  <key>JVMRuntime</key>
+  <string>$APPDIR/plugins/Java</string>
+  <key>JVMMainClassName</key>
+  <string>com.sfxcode.sapphire.core.demo.login.Application</string>
+  <key>JVMAppClasspath</key>
+  <string>lib/akka-actor_2.11-2.3.9.jar:lib/cdi-api-1.2.jar:lib/config-1.2.1.jar:lib/controlsfx-8.20.8.jar:lib/deltaspike-cdictrl-api-1.2.1.jar:lib/deltaspike-cdictrl-owb-1.2.1.jar:lib/deltaspike-core-api-1.2.1.jar:lib/deltaspike-core-impl-1.2.1.jar:lib/geronimo-servlet_3.0_spec-1.0.jar:lib/javax.el-api-3.0.0.jar:lib/javax.inject-1.jar:lib/javax.interceptor-api-1.2.jar:lib/juel-api-2.2.7.jar:lib/juel-impl-2.2.7.jar:lib/juel-spi-2.2.7.jar:lib/logback-classic-1.1.2.jar:lib/logback-core-1.1.2.jar:lib/openwebbeans-impl-1.2.7.jar:lib/openwebbeans-spi-1.2.7.jar:lib/sapphire-core_2.11.jar:lib/sapphire-extension_2.11.jar:lib/scala-library-2.11.6.jar:lib/scala-logging_2.11-3.1.0.jar:lib/scala-reflect-2.11.5.jar:lib/scalafx_2.11-8.0.31-R7.jar:lib/scalafxml-core-macros-sfx8_2.11-0.2.2.jar:lib/scalafxml-core-sfx8_2.11-0.2.2.jar:lib/slf4j-api-1.7.7.jar:lib/xbean-asm5-shaded-4.1.jar:lib/xbean-finder-shaded-4.1.jar</string>
+  <key>JVMMainJarName</key>
+  <string>sapphire-demo-login_2.11.6-1.0.1.jar</string>
+  <key>JVMPreferencesID</key>
+  <string>sapphire-demo-login</string>
+  <key>JVMOptions</key>
+  <array>
+
+  </array>
+  <key>JVMUserOptions</key>
+    <dict>
+
+    </dict>
+  <key>ArgOptions</key>
+  <array>
+
+  </array>
+  <key>NSHighResolutionCapable</key>
+  <string>true</string>
+ </dict>
+</plist>

@@ -1,10 +1,12 @@
+import sbt.Keys._
+
 name := "sapphire-demo-login"
 
 organization := "com.sfxcode"
 
-version := "0.9.9.6"
+version := "1.0.0-SNAPSHOT"
 
-scalaVersion := "2.11.5"
+scalaVersion := "2.11.6"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
@@ -14,15 +16,29 @@ mainClass := Some("com.sfxcode.sapphire.core.demo.login.Application")
 
 resolvers ++= Seq(
   "sfxcode-releases" at "https://raw.github.com/sfxcode/mvn-repo/master/releases",
-  "sfxcode-snapshots" at "https://raw.github.com/sfxcode/mvn-repo/master/snapshots"
+  "sfxcode-snapshots" at "https://raw.github.com/sfxcode/mvn-repo/master/snapshots",
+  "sonatype-snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
 )
 
 libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "2.4.16" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.3.0"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.3.2"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
+
+
+jfxSettings
+
+JFX.mainClass := Some("com.sfxcode.sapphire.core.demo.login.Application")
+
+JFX.nativeBundles := "dmg"
+
+JFX.vendor := "SFXCode"
+
+JFX.verbose := true
+
+
 
 
