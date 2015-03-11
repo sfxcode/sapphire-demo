@@ -22,7 +22,6 @@ class MainWindowController extends ViewController{
   @FXML
   var statusBar:StatusBar = _
 
-
   var workspaceManager: ContentManager = _
   var navigationManager:ContentManager = _
 
