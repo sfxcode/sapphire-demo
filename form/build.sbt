@@ -23,7 +23,7 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "3.0.1" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.3.2"
+// libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.3.2"
 
 libraryDependencies += "org.json4s" %% "json4s-native" % "3.2.11"
 

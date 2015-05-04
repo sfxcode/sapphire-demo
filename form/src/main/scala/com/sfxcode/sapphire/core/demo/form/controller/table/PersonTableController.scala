@@ -1,13 +1,9 @@
 package com.sfxcode.sapphire.core.demo.form.controller.table
 
-import javafx.collections.ObservableList
-
-import com.sfxcode.sapphire.extension.table.FXTableViewController
 import com.sfxcode.sapphire.core.demo.form.model.{Person, PersonDatabase}
-import com.sfxcode.sapphire.core.value.FXBean
+import com.sfxcode.sapphire.extension.filter.DataTableFilter
 
 import scala.reflect._
-import scalafx.collections.ObservableBuffer
 
 
 class PersonTableController extends AbstractTableViewController {
@@ -16,17 +12,18 @@ class PersonTableController extends AbstractTableViewController {
 
   def ct =  classTag[R]
 
-  def records: ObservableList[FXBean[R]] =  ObservableBuffer(PersonDatabase.personList)
+  def items =  PersonDatabase.persons
 
-  override def initTable(tableController: FXTableViewController[R]): Unit = {
-    super.initTable(tableController)
+  override def initTable(tableFilter: DataTableFilter[R]): Unit = {
+    super.initTable(tableFilter)
+    tableFilter.hideColumn("tags", "friends","about","guid","picture")
 
-    tableController.hideColumn("tags", "friends","about","guid","picture")
-
-    tableController.addSearchField("addressFilter", "address").setPromptText("Address")
-    tableController.addSearchBox("genderFilter", "gender", "male/female")
-    tableController.addSearchBox("fruitFilter", "favoriteFruit", "all fruits")
+    tableFilter.addSearchField("addressFilter", "address").setPromptText("Address")
+    tableFilter.addSearchBox("genderFilter", "gender", "male/female")
+    tableFilter.addSearchBox("fruitFilter", "favoriteFruit", "all fruits")
   }
+
+
 
 }
 

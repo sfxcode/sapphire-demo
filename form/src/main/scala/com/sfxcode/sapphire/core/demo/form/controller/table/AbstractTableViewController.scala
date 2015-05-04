@@ -1,20 +1,21 @@
 package com.sfxcode.sapphire.core.demo.form.controller.table
 
-import com.sfxcode.sapphire.extension.controller.TableViewController
-import com.sfxcode.sapphire.extension.table.FXTableViewController
 import com.sfxcode.sapphire.core.demo.form.controller.MainWindowController
+import com.sfxcode.sapphire.extension.controller.DataTableController
+import com.sfxcode.sapphire.extension.filter.DataTableFilter
 import com.typesafe.scalalogging.LazyLogging
 
-abstract class AbstractTableViewController extends TableViewController with LazyLogging {
+abstract class AbstractTableViewController extends DataTableController with LazyLogging {
 
-  override def initTable(tableController: FXTableViewController[R]): Unit = {
-    tableController.hideColumn("metaData")
-    tableController.addSearchField("nameFilter", "name").setPromptText("Name")
 
+  override def initTable(tableFilter: DataTableFilter[R]): Unit = {
+    super.initTable(tableFilter)
+    tableFilter.hideColumn("metaData")
+    tableFilter.addSearchField("nameFilter", "name").setPromptText("Name")
   }
 
   override def didGainVisibility() {
-    mainWindowController.statusBar.setText("%d records loaded".format(tableController.values.size))
+    mainWindowController.statusBar.setText("%d records loaded".format(items.value.size))
   }
 
   def mainWindowController: MainWindowController = {

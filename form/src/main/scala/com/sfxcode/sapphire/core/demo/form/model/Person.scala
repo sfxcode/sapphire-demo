@@ -52,9 +52,6 @@ object PersonDatabase  {
 
   def testFriend(id:Int) = FXBean(friends(id))
 
-  def personList = persons.map(item => FXBean[Person](item))
+  def smallPersonList = persons.take(10)
 
-  def smallPersonList = personList.take(10)
-
-  def friendList = friends.map(item => FXBean[Friend](item))
 }
