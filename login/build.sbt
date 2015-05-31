@@ -4,7 +4,7 @@ name := "sapphire-demo-login"
 
 organization := "com.sfxcode"
 
-version := "1.0.0-SNAPSHOT"
+version := "1.0.0"
 
 scalaVersion := "2.11.6"
 
@@ -24,7 +24,7 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "2.4.16" % "test"
 )
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.3.2"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.0.0"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
 

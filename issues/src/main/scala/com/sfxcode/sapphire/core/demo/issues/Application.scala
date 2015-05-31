@@ -4,10 +4,10 @@ import javax.enterprise.context.ApplicationScoped
 import javax.enterprise.inject.Produces
 import javax.inject.Named
 
-import com.sfxcode.sapphire.extension.fxml.ScalaFxmlLoading
 import com.sfxcode.sapphire.core.cdi.FXApp
 import com.sfxcode.sapphire.core.controller.AppController
 import com.sfxcode.sapphire.core.demo.issues.controller.IssueTrackingLiteController
+import com.sfxcode.sapphire.core.fxml.ScalaFxmlLoading
 
 import scalafx.application.JFXApp.PrimaryStage
 import scalafx.scene.Scene

@@ -3,9 +3,7 @@ sapphire-demo
 
 sapphire demo applications.
 
-based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 0.9.9.6.
-
-and [sapphire-extension](http://sfxcode.github.io/sapphire-extension/) 0.3.0.
+based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 1.0.0.
 
 ## Demos
 
@@ -21,10 +19,6 @@ unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "
 
 
 All demos are tested with IntelliJ Idea.
-
-### Form
-
-A simple Form Demo. It shows the usage of FXAdapter / Bindings.
                
 ### Login Demo
 
