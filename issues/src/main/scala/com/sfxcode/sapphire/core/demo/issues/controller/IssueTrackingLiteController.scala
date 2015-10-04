@@ -26,6 +26,8 @@ class IssueTrackingLiteController extends ViewController {
   val displayedProjectNames = new ObservableBuffer[String]()
   val displayedIssues = new ObservableBuffer[String]()
 
+
+
   override def didGainVisibility() {
     super.didGainVisibility()
     println(ApplicationEnvironment.controllerMap)
