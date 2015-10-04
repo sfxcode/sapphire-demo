@@ -1,9 +1,12 @@
 sapphire-demo
 =============
 
-sapphire demo applications.
+sapphire-core demo applications.
 
-based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 1.0.2.
+based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) .
+
+[ ![Download](https://api.bintray.com/packages/sfxcode/maven/sapphire-core/images/download.svg) ](https://bintray.com/sfxcode/maven/sapphire-core/_latestVersion)
+
 
 ## Demos
 
