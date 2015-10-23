@@ -16,14 +16,14 @@ class ProfileController extends ViewController {
     bindings.add("user", "User: ${_self.name()} Mailsize: (${_self.email().length()})")
     userAdapter.addBindings(bindings)
 
-    userAdapter.set(applicationController().applicationUser)
+    userAdapter.beanProperty.value = applicationController().applicationUser.get
   }
 
   def actionLogout(event: ActionEvent) {
     userAdapter.revert()
-    userAdapter.set()
+    userAdapter.unset()
     applicationController().applicationUser = None
-    applicationController() showLogin()
+    applicationController().showLogin()
   }
 
   def actionUpdate(event: ActionEvent) {

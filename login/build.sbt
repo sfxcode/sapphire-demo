@@ -4,7 +4,7 @@ name := "sapphire-demo-login"
 
 organization := "com.sfxcode"
 
-version := "1.0.0"
+version := "1.0.5"
 
 scalaVersion := "2.11.7"
 
@@ -14,9 +14,12 @@ scalacOptions += "-target:jvm-1.7"
 
 mainClass := Some("com.sfxcode.sapphire.core.demo.login.Application")
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "3.6.4" % "test"
+resolvers += JCenterRepository
 
-libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-core" % "1.0.2"
+
+libraryDependencies += "org.specs2" %% "specs2-core" % "3.6.5" % "test"
+
+libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-core" % "1.0.5"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
 

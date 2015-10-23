@@ -51,7 +51,7 @@
                             <children>
                                 <Label id="label1" layoutX="14.0" layoutY="67.0" text="Username" />
                                 <TextField id="textField1" fx:id="email" layoutY="86.0" prefWidth="415.0" promptText="Username" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
-                                <Label id="label1" layoutX="14.0" layoutY="139.0" text="Password" />
+                                <Label id="label1" layoutX="14.0" layoutY="139.0" text="Password (admin)" />
                                 <PasswordField id="passwordField1" fx:id="password" layoutY="157.0" prefWidth="415.0" promptText="Password" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
                                 <ImageView id="app-login-logo" layoutY="-12.0">
                                     <image>

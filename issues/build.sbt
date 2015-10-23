@@ -2,7 +2,7 @@ name := "sapphire-demo-issues"
 
 organization := "com.sfxcode"
 
-version := "1.0.2"
+version := "1.0.5"
 
 scalaVersion := "2.11.7"
 
@@ -16,6 +16,6 @@ addCompilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.fu
 
 libraryDependencies += "org.specs2" %% "specs2-core" % "3.6.4" % "test"
 
-libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-core" % "1.0.2"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.0.5"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
