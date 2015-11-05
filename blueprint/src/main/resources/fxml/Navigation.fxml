@@ -10,8 +10,8 @@
         <HBox layoutY="-10.0" prefHeight="40.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="0.0"
               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <Button mnemonicParsing="false" onAction="#actionToggleWorkspace" text="Toggle Workspace"/>
-                <Button mnemonicParsing="false" onAction="#actionClickButton" text="Navigation Button 2"/>
+                <Button mnemonicParsing="false" onAction="#actionToggleWorkspace" text="%navigation.toggle"/>
+                <Button mnemonicParsing="false" onAction="#actionShowPersonController" text="FXBean Demo"/>
                 <Button mnemonicParsing="false" onAction="#actionClickButton" text="Navigation Button  3"/>
             </children>
             <padding>

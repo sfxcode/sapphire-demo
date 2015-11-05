@@ -32,11 +32,11 @@ class StatusBarController extends ViewController with LazyLogging {
     spacing = 10
     children = List(
       new Button {
-        text = "Button 1"
+        text = "Status Button 1"
         onAction = handleButtonAction(this)
       },
       new Button {
-        text = "Button 2"
+        text = "Status Button 2"
         onAction = handleButtonAction(this)
       },
       statusLabel,

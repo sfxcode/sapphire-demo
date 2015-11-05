@@ -13,6 +13,7 @@ import scalafx.Includes._
 class MainWindowController extends ViewController with LazyLogging{
 
   lazy val workspaceController = getController[WorkspaceController]()
+  lazy val secondWorkspaceController = getController[SecondWorkspaceController]()
   lazy val personController = getController[PersonController]()
   lazy val navigationController = getController[NavigationController]()
   lazy val statusBarController = getBean[StatusBarController]()

@@ -14,6 +14,7 @@ class ApplicationController extends AppController {
 
   def applicationDidLaunch() {
     logger.info("start " + this)
+    applicationEnvironment.loadResourceBundle("bundles/application")
     replaceSceneContent(mainWindowController)
   }
 }

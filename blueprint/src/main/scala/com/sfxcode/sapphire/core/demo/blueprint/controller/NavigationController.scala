@@ -10,21 +10,26 @@ import scalafx.Includes._
   */
 class NavigationController extends AbstractViewController {
 
-  def actionClickButton (event: ActionEvent) {
+  def actionClickButton(event: ActionEvent) {
     logger.debug(event.toString)
     val source = event.getSource
 
     // resolve controller by getViewController lookup
     val controller = getViewController[StatusBarController]()
-    controller.foreach(c=> c.updateLabel(event.getSource.asInstanceOf[Button]))
+    controller.foreach(c => c.updateLabel(event.getSource.asInstanceOf[Button]))
   }
 
-  def actionToggleWorkspace (event: ActionEvent)  {
+  def actionToggleWorkspace(event: ActionEvent) {
     actionClickButton(event)
     if (workspaceManager.actualController == mainWindowController.workspaceController)
-      workspaceManager.updatePaneContent(mainWindowController.personController)
+      workspaceManager.updatePaneContent(mainWindowController.secondWorkspaceController)
     else
       workspaceManager.updatePaneContent(mainWindowController.workspaceController)
+  }
+
+  def actionShowPersonController(event: ActionEvent): Unit = {
+    actionClickButton(event)
+    workspaceManager.updatePaneContent(mainWindowController.personController)
   }
 
 
