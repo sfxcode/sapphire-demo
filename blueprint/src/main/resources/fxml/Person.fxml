@@ -44,7 +44,7 @@
             <VBox prefHeight="150.0" spacing="10.0" BorderPane.alignment="CENTER">
                <children>
                   <Label id="person" prefHeight="16.0" prefWidth="226.0" text="Please select Person" />
-                  <GridPane fx:id="editPane" maxWidth="250.0">
+                  <GridPane fx:id="editPane" maxWidth="250.0" styleClass="personPane">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
