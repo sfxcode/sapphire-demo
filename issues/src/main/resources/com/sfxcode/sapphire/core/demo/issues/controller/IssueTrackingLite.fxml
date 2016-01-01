@@ -37,7 +37,7 @@
 <?import javafx.scene.layout.*?>
 
 <?import com.sfxcode.sapphire.core.control.FXValueFactory?>
-<AnchorPane id="AnchorPane" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="theme" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.sfxcode.sapphire.core.demo.issues.controller.IssueTrackingLiteFxml">
+<AnchorPane id="AnchorPane" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="theme" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.sfxcode.sapphire.core.demo.issues.controller.IssueTrackingLiteView">
   <children>
     <SplitPane id="splitPaneHorizontal1" dividerPositions="0.25125" focusTraversable="true" prefHeight="535.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
       <items>

@@ -2,8 +2,7 @@ package com.sfxcode.sapphire.core.demo.issues.controller
 
 import javax.inject.Inject
 
-import com.sfxcode.sapphire.core.cdi.BeanResolver
-import com.sfxcode.sapphire.core.controller.ViewController
+import com.sfxcode.sapphire.core.controller.ScalaViewController
 import com.sfxcode.sapphire.core.demo.issues.EmptyName
 import com.sfxcode.sapphire.core.demo.issues.model.{Issue, IssueDataBase}
 import com.sfxcode.sapphire.core.value._
@@ -16,13 +15,12 @@ import scalafx.scene.control.{SelectionMode, _}
 import scalafx.scene.layout.AnchorPane
 import scalafxml.core.macros.sfxml
 
-class IssueTrackingLiteController extends ViewController with LazyLogging {
-  def ui = fxml.asInstanceOf[IssueTrackingLiteFxml]
+class IssueTrackingLiteController extends ScalaViewController[IssueTrackingLiteView] with LazyLogging {
 
   @Inject
   var emptyName:EmptyName = _
 
-  lazy val issueAdapter = FXBeanAdapter[Issue](this, ui.detailPane)
+  lazy val issueAdapter = FXBeanAdapter[Issue](this, view.detailPane)
 
   val displayedProjectNames = new ObservableBuffer[String]()
   val displayedIssues = new ObservableBuffer[String]()
@@ -33,18 +31,18 @@ class IssueTrackingLiteController extends ViewController with LazyLogging {
     super.didGainVisibility()
     logger.debug(applicationEnvironment.controllerMap.toString())
     issueAdapter.addBindings(KeyBindings("synopsis", "description"))
-    issueAdapter.addBinding(ui.saveButton.visibleProperty(), "_hasChanges")
+    issueAdapter.addBinding(view.saveButton.visibleProperty(), "_hasChanges")
 
     // issueAdapter.parent = detailPane
     displayedProjectNames.++=(IssueDataBase.projectNames.sortBy(name => name))
-    ui.list.setItems(displayedProjectNames)
+    view.list.setItems(displayedProjectNames)
 
-    ui.detailPane.visibleProperty.bind(issueAdapter.hasBeanProperty)
-    ui.deleteButton.visibleProperty.bind(issueAdapter.hasBeanProperty)
+    view.detailPane.visibleProperty.bind(issueAdapter.hasBeanProperty)
+    view.deleteButton.visibleProperty.bind(issueAdapter.hasBeanProperty)
   }
 
   def selectedProjectName:Option[String] = {
-    val selected = ui.list.getSelectionModel.selectedItem
+    val selected = view.list.getSelectionModel.selectedItem
     if (selected.value == null)
       return None
     Some(selected.value)
@@ -88,20 +86,19 @@ class IssueTrackingLiteController extends ViewController with LazyLogging {
     projectName match {
       case name: String =>
         val newItems = IssueDataBase.projectsMap(projectName)
-        newItems.foreach(item => ui.table.getItems.add(item))
+        newItems.foreach(item => view.table.getItems.add(item))
     }
   }
 
   def projectUnselected(projectName: String) {
-    ui.table.getItems.clear()
+    view.table.getItems.clear()
   }
-
 
 }
 
 
 @sfxml
-class IssueTrackingLiteFxml(val list: ListView[String], val table: TableView[FXBean[Issue]], val detailPane: AnchorPane, var deleteButton: Button, var saveButton: Button, var viewController: IssueTrackingLiteController) extends BeanResolver {
+class IssueTrackingLiteView(val list: ListView[String], val table: TableView[FXBean[Issue]], val detailPane: AnchorPane, var deleteButton: Button, var saveButton: Button, var viewController: IssueTrackingLiteController)  {
 
   detailPane.setVisible(false)
   deleteButton.setVisible(false)
