@@ -1,10 +1,10 @@
-package com.sfxcode.sapphire.core.demo.blueprint
+package com.sfxcode.sapphire.core.demo.tutorial
 
 import javax.enterprise.context.ApplicationScoped
 import javax.inject.Named
 
 import com.sfxcode.sapphire.core.controller.AppController
-import com.sfxcode.sapphire.core.demo.blueprint.controller.MainWindowController
+import com.sfxcode.sapphire.core.demo.tutorial.controller.MainWindowController
 
 @Named
 @ApplicationScoped

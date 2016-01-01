@@ -25,7 +25,7 @@ FXML support by scalafxml.
 
 [https://github.com/vigoo/scalafxml/] (https://github.com/vigoo/scalafxml)
 
-### Blueprint
+### Tutorial
 
-Blueprint Application for initial usage.
+Tutorial Application.
 

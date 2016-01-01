@@ -1,5 +1,5 @@
 
-package com.sfxcode.sapphire.core.demo.blueprint.controller
+package com.sfxcode.sapphire.core.demo.tutorial.controller
 
 import com.sfxcode.sapphire.core.controller.ViewController
 import com.typesafe.scalalogging.LazyLogging

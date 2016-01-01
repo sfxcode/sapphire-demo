@@ -1,4 +1,4 @@
-package com.sfxcode.sapphire.core.demo.blueprint
+package com.sfxcode.sapphire.core.demo.tutorial
 
 import com.sfxcode.sapphire.core.cdi.FXApp
 import com.typesafe.config.ConfigFactory
@@ -15,7 +15,7 @@ object Application extends FXApp {
   override def applicationStage:Stage  = {
     val conf = ConfigFactory.load()
     new PrimaryStage {
-      title = "%s Blueprint (%s)".format(conf.getString("sapphire.core.name"), conf.getString("sapphire.core.version"))
+      title = "%s Tutorial (%s)".format(conf.getString("sapphire.core.name"), conf.getString("sapphire.core.version"))
       minHeight = 400
       minWidth = 600
       scene = new Scene {

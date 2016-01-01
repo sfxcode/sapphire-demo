@@ -1,4 +1,4 @@
-package com.sfxcode.sapphire.core.demo.blueprint.controller
+package com.sfxcode.sapphire.core.demo.tutorial.controller
 
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
@@ -6,7 +6,7 @@ import javafx.scene.control.TableView
 import javafx.scene.layout.GridPane
 
 import com.sfxcode.sapphire.core.Includes._
-import com.sfxcode.sapphire.core.demo.blueprint.model.{Person, PersonFactory}
+import com.sfxcode.sapphire.core.demo.tutorial.model.{Person, PersonFactory}
 import com.sfxcode.sapphire.core.value.{KeyBindings, FXBeanAdapter, FXBean}
 
 import scalafx.Includes._

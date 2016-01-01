@@ -1,4 +1,4 @@
-package com.sfxcode.sapphire.core.demo.blueprint.controller
+package com.sfxcode.sapphire.core.demo.tutorial.controller
 
 import javafx.event.ActionEvent
 import javafx.scene.control.Button

@@ -1,4 +1,4 @@
-package com.sfxcode.sapphire.core.demo.blueprint.model
+package com.sfxcode.sapphire.core.demo.tutorial.model
 
 
 case class Person(id:Int,name: String, age: Int)
