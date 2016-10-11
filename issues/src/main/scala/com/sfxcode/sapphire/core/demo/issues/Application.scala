@@ -7,7 +7,6 @@ import javax.inject.Named
 import com.sfxcode.sapphire.core.cdi.FXApp
 import com.sfxcode.sapphire.core.controller.AppController
 import com.sfxcode.sapphire.core.demo.issues.controller.IssueTrackingLiteController
-import com.sfxcode.sapphire.core.fxml.ScalaFxmlLoading
 import com.typesafe.config.ConfigFactory
 
 import scalafx.application.JFXApp.PrimaryStage
@@ -39,8 +38,8 @@ case class EmptyName(name: String)
 
 @Named
 @ApplicationScoped
-class ApplicationController extends AppController with ScalaFxmlLoading {
-  lazy val mainController = getScalaController[IssueTrackingLiteController]()
+class ApplicationController extends AppController {
+  lazy val mainController = getController[IssueTrackingLiteController]()
 
   def applicationDidLaunch() {
     println("start " + this)

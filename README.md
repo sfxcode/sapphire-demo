@@ -21,10 +21,6 @@ JavaFX Login Demo pimped by Sapphire.
 
 JavaFX Issues Demo pimped by Sapphire.
 
-FXML support by scalafxml.
-
-[https://github.com/vigoo/scalafxml/] (https://github.com/vigoo/scalafxml)
-
 ### Tutorial
 
 Tutorial Application.

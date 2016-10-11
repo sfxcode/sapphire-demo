@@ -2,9 +2,9 @@ name := "sapphire-demo-issues"
 
 organization := "com.sfxcode"
 
-version := "1.1.0"
+version := "1.1.7"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
@@ -12,10 +12,6 @@ scalacOptions += "-target:jvm-1.7"
 
 mainClass := Some("com.sfxcode.sapphire.core.demo.issues.Application")
 
-addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.1.7"
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "3.6.6" % "test"
-
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.1.0"
-
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.7"
