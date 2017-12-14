@@ -10,7 +10,7 @@ import scalafx.stage.Stage
 
 object Application extends FXApp {
 
-  JFXApp.AUTO_SHOW = true
+  JFXApp.AutoShow = true
 
   override def applicationStage:Stage  = {
     val conf = ConfigFactory.load()
