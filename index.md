@@ -3,26 +3,18 @@ sapphire-demo
 
 sapphire demo applications.
 
-based on [sapphire-core](http://sfxcode.github.io/sapphire-core/) 0.9.9.6.
+based on [sapphire-core](http://sfxcode.github.io/sapphire-core/)
 
-and [sapphire-extension](http://sfxcode.github.io/sapphire-extension/) 0.3.0.
+[ ![Download](https://api.bintray.com/packages/sfxcode/maven/sapphire-core/images/download.svg) ](https://bintray.com/sfxcode/maven/sapphire-core/_latestVersion)
 
 ## Demos
 
 ### Notes
 
-If you start the demos from sbt with run,
-
-the resource com/sun/javafx/scene/control/skin/modena/modena.css can not be found.
-
-Workaround sbt setting:
-
-unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/ext/jfxrt.jar"))
-
 
 All demos are tested with IntelliJ Idea.
 
-### Form
+### Tutorial
 
 A simple Form Demo. It shows the usage of FXAdapter / Bindings.
                
@@ -34,13 +26,5 @@ JavaFX Login Demo pimped by Sapphire.
 
 JavaFX Issues Demo pimped by Sapphire.
 
-FXML support by scalafxml.
 
-[https://github.com/vigoo/scalafxml/] (https://github.com/vigoo/scalafxml)
-
-compile from IntelliJ IDEA, because of sbt console compile problems
-
-### Blueprint
-
-Blueprint Application for initial usage.
 
